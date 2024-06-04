@@ -1,10 +1,10 @@
 @keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(200deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(200deg);
+  }
 }
 
 #app {
@@ -168,7 +168,7 @@
     word-break: break-all;
     overflow: hidden;
     &::after {
-      content: '...';
+      content: "...";
       position: absolute;
       bottom: 0;
       right: 0;
@@ -192,7 +192,7 @@
     border-width: 0 50px 50px;
     border-color: transparent transparent #d9534f;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 6px;
       left: -40px;
@@ -277,7 +277,48 @@
     // row-gap: 20px;
     // column-gap: 10px;
     .item {
-        background-color: antiquewhite;
+      background-color: antiquewhite;
+    }
+  }
+  .grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+      "a a a"
+      "d e f"
+      "g h .";
+    grid-auto-flow: column;
+    align-items: start;
+    justify-items: end;
+    place-items: start end;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas:
+      "a a a"
+      "d e f"
+      "g h .";
+    .item-1 {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+    .item-2 {
+      grid-area: g;
+    }
+    .item {
+      background-color: darkolivegreen;
+    }
+  }
+
+  .flex {
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    .item {
+      width: 100px;
     }
   }
 }

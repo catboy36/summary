@@ -1,7 +1,7 @@
 // import './style.css';
-import './style/index.less';
-import javascriptLogo from './javascript.svg';
-import viteLogo from '/vite.svg';
+import "./style/index.less";
+import javascriptLogo from "./javascript.svg";
+import viteLogo from "/vite.svg";
 
 // bfc
 // document.querySelector('#app').innerHTML = `
@@ -145,15 +145,54 @@ import viteLogo from '/vite.svg';
 // `;
 
 // grid布局
-document.querySelector('#app').innerHTML = `
-  <div class="grid">
-    <div class="item item-1">
-     <p class="sub-item"></p >
-    </div>
-    <div class="item item-2"></div>
-    <div class="item item-3"></div>
-    <div class="item item-4"></div>
-    <div class="item item-5"></div>
-    <div class="item item-6"></div>
+// document.querySelector("#app").innerHTML = `
+//   <div class="grid">
+//     <div class="item item-1">
+//      <p class="sub-item"></p >
+//     </div>
+//     <div class="item item-2"></div>
+//     <div class="item item-3"></div>
+//     <div class="item item-4"></div>
+//     <div class="item item-5"></div>
+//     <div class="item item-6"></div>
+//   </div>
+// `;
+// grid-template-areas
+// document.querySelector("#app").innerHTML = `
+//   <div class="grid1">
+//     <div class="item item-1">
+//      1
+//     </div>
+//     <div class="item item-2">2</div>
+//     <div class="item item-3">3</div>
+//     <div class="item item-4">4</div>
+//     <div class="item item-5">5</div>
+//     <div class="item item-6">6</div>
+//     <div class="item item-7">7</div>
+//     <div class="item item-8">8</div>
+//     <div class="item item-9">9</div>
+//   </div>
+// `;
+// grid-column-start/end
+// document.querySelector("#app").innerHTML = `
+//   <div class="grid2">
+//     <div class="item item-1">1</div>
+//     <div class="item item-2">2</div>
+//     <div class="item item-3">3</div>
+//   </div>
+// `;
+
+// flex布局
+document.querySelector("#app").innerHTML = `
+  <div class="flex">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item item-4">4</div>
+    <div class="item item-5">5</div>
+    <div class="item item-6">6</div>
   </div>
 `;
+
+
+// 设备像素，css像素，设备独立像素，dpr，ppi
