@@ -109,18 +109,51 @@ import viteLogo from '/vite.svg';
 
 // 视差滚动（多层背景以不同速度移动，形成立体运动效果，带来出色视觉体验）---背景层>内容层>悬浮层
 // 1. background-attachment
-document.querySelector('#app').innerHTML = `
-  <div class="attach a-text">1</div>
-  <div class="attach a-img1">2</div>
-  <div class="attach a-text">3</div>
-  <div class="attach a-img2">4</div>
-  <div class="attach a-text">5</div>
-  <div class="attach a-img3">6</div>
-  <div class="attach a-text">7</div>
-`;
+// document.querySelector('#app').innerHTML = `
+//   <div class="attach a-text">1</div>
+//   <div class="attach a-img1">2</div>
+//   <div class="attach a-text">3</div>
+//   <div class="attach a-img2">4</div>
+//   <div class="attach a-text">5</div>
+//   <div class="attach a-img3">6</div>
+//   <div class="attach a-text">7</div>
+// `;
 // 2. transform:translate3D
 // document.querySelector('#app').innerHTML = `
 //   <div class="attach one"></div>
 //   <div class="attach two"></div>
 //   <div class="attach three"></div>
 // `;
+
+// transition,transform,animation
+
+// 混合模式 background-blend-mode mix-blend-mode
+// https://blog.csdn.net/qq_38974163/article/details/133649322
+
+// css3动画
+// transition
+// document.querySelector('#app').innerHTML = `
+//   <div class="base"></div>
+// `;
+// transform
+// document.querySelector('#app').innerHTML = `
+//   <div class="base base2"></div>
+// `;
+// animation
+// document.querySelector('#app').innerHTML = `
+//   <div class="animation"></div>
+// `;
+
+// grid布局
+document.querySelector('#app').innerHTML = `
+  <div class="grid">
+    <div class="item item-1">
+     <p class="sub-item"></p >
+    </div>
+    <div class="item item-2"></div>
+    <div class="item item-3"></div>
+    <div class="item item-4"></div>
+    <div class="item item-5"></div>
+    <div class="item item-6"></div>
+  </div>
+`;

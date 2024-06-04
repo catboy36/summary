@@ -1,3 +1,12 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(200deg);
+    }
+}
+
 #app {
   .aside {
     float: left;
@@ -221,7 +230,58 @@
       background-position: center center;
     }
   }
+  .base {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: #0ea9ff;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #5daf34;
+    transition-property: width, height, background-color, border-width;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+    transition-delay: 500ms;
+  }
+  /* */
+  /*transition: all 2s ease-in 500ms;*/
+  .base:hover {
+    width: 200px;
+    height: 200px;
+    background-color: #5daf34;
+    border-width: 10px;
+    border-color: #3a8ee6;
+  }
+  .base2 {
+    transition-property: transform;
+    transition-delay: 5ms;
+  }
+  .base2:hover {
+    transform: scale(0.8, 1.5) rotate(35deg) skew(5deg) translate(15px, 25px);
+  }
+  .animation {
+    width: 200px;
+    height: 200px;
+    background-color: #5daf34;
+    animation: rotate 2s ease 0s 2 normal forwards;
+  }
+
+  .grid {
+    display: grid;
+    // grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 200px minmax(200px, 1fr) 200px;
+    // grid-template-columns: repeat(3, 200px);
+    // grid-template-rows: 100px 100px;
+    grid-template-rows: repeat(2, 100px);
+    gap: 20px 10px;
+    // row-gap: 20px;
+    // column-gap: 10px;
+    .item {
+        background-color: antiquewhite;
+    }
+  }
 }
+
 @media screen and (min-width: 375px) and (max-width: 600px) {
   #app {
     .media {
