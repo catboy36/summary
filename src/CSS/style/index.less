@@ -140,8 +140,88 @@
       margin-right: 140px;
     }
   }
-}
+  .hidden {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+  }
+  .single-text {
+    width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: no-wrap;
+  }
+  .multi-text {
+    position: relative;
+    height: 40px;
+    line-height: 20px;
+    word-break: break-all;
+    overflow: hidden;
+    &::after {
+      content: '...';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .multi-text-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    width: 400px;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
+  .border {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 50px 50px;
+    border-color: transparent transparent #d9534f;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: -40px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 40px 40px;
+      border-color: transparent transparent #fff;
+    }
+  }
+
+  .attach {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 20vh;
+    &.a-img1 {
+      background-image: url(https://images.pexels.com/photos/1097491/pexels-photo-1097491.jpeg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center center;
+    }
+    &.a-img2 {
+      background-image: url(https://images.pexels.com/photos/2437299/pexels-photo-2437299.jpeg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center center;
+    }
+    &.a-img3 {
+      background-image: url(https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
 @media screen and (min-width: 375px) and (max-width: 600px) {
   #app {
     .media {
@@ -154,7 +234,6 @@
     }
   }
 }
-
 @media screen and (min-width: 600px) and (max-width: 1440px) {
   #app {
     .media {
@@ -167,3 +246,37 @@
     }
   }
 }
+
+// 下方代码，translate:translate3D实现视差滚动
+// #app {
+//   overflow-y: scroll;
+//   overflow-x: hidden;
+//   height: 100%;
+//   background: skyblue;
+//   width: 100vw;
+//   //   height: 200vh;
+//   perspective: 100px;
+//   transform-style: preserve-3d;
+//   padding-top: 800px;
+// }
+// .one {
+//   width: 500px;
+//   height: 200px;
+//   background: #409eff;
+//   transform: translateZ(0px);
+//   margin-bottom: 50px;
+// }
+// .two {
+//   width: 500px;
+//   height: 200px;
+//   background: #67c23a;
+//   transform: translateZ(-10px);
+//   margin-bottom: 150px;
+// }
+// .three {
+//   width: 500px;
+//   height: 200px;
+//   background: #e6a23c;
+//   transform: translateZ(-200px);
+//   margin-bottom: 150px;
+// }
