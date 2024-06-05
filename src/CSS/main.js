@@ -194,5 +194,14 @@ document.querySelector("#app").innerHTML = `
   </div>
 `;
 
-
 // 设备像素，css像素，设备独立像素，dpr，ppi
+
+// 重绘和回流（重排）
+// 优化措施：class代替内联样式，position：absolute/fixe,css3 transform, opacity, filters, animation, 避免css表达式，节点一次性插入（fragment））
+
+// css预处理 sass/scss, less, stylus
+
+
+// css性能优化
+// 1. 内联关键样式 2. 外部css异步加载 3. 压缩（webpack,gulp,roll-up） 4. 减少@import 5. 合理的选择器使用（不要嵌套超过三层，通配符，属性选择器少用，用id了就不要嵌套）
+// 6. 减少重绘重排，css transform，opacity代替left，top 7. icon很小base64，字体文件，雪碧图
