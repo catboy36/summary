@@ -16,7 +16,11 @@ importers:
         specifier: ^5.2.0
         version: 5.2.12(less@4.2.0)
 
-  src/JavaScript: {}
+  src/JavaScript:
+    devDependencies:
+      vite:
+        specifier: ^5.2.0
+        version: 5.2.12(less@4.2.0)
 
   src/React: {}
 
