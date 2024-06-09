@@ -1,6 +1,7 @@
 import javascriptLogo from "./javascript.svg";
 import viteLogo from "/vite.svg";
 import { a, arr, b, c, d, e, f, f1, f2, f3, f4, g, person } from "./core/basic";
+import "./core/funcCache";
 
 // 基本类型
 console.log(typeof a);
