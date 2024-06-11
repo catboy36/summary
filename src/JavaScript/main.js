@@ -24,7 +24,7 @@ console.log(document.documentElement);
 // == ===
 console.log(`'' == '0'`, "" == "0");
 console.log(`0 == ''`, 0 == "");
-console.log(`'' == '0'`, 0 == "0");
+console.log(`0 == '0'`, 0 == "0");
 
 console.log(`false == 'false'`, false == "false");
 console.log(`false == 0`, false == "0");
