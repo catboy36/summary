@@ -24,6 +24,15 @@ importers:
 
   src/React: {}
 
+  src/TypeScript:
+    devDependencies:
+      typescript:
+        specifier: ^5.2.2
+        version: 5.4.5
+      vite:
+        specifier: ^5.2.0
+        version: 5.2.12(less@4.2.0)
+
 packages:
 
   '@esbuild/aix-ppc64@0.20.2':
@@ -347,6 +356,11 @@ packages:
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==, tarball: https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz}
 
+  typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==, tarball: https://registry.npmjs.org/typescript/-/typescript-5.4.5.tgz}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   vite@5.2.12:
     resolution: {integrity: sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==, tarball: https://registry.npmjs.org/vite/-/vite-5.2.12.tgz}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -631,6 +645,8 @@ snapshots:
     optional: true
 
   tslib@2.6.2: {}
+
+  typescript@5.4.5: {}
 
   vite@5.2.12(less@4.2.0):
     dependencies:
