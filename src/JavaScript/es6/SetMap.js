@@ -43,5 +43,5 @@ wm.get(key);
 // Object {foo: 1}
 
 // WeakSet
-// 与set区别：没有遍历操作api，没有clear方法, 只接受对象,Symbol作为键名
+// 与set区别：没有遍历操作api，没有clear方法, 只接受对象,Symbol作为键名， 没有 size属性
 // 存储的都是弱引用，不需要的时候自动清除
