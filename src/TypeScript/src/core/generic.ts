@@ -11,8 +11,53 @@ function swap<T, U>(tuple: [T, U]): [U, T] {
   return [tuple[1], tuple[0]];
 }
 
+const res = swap([6, 7]);
+
 // 接口声明
 interface IReturnItemFn<T> {
   (param: T): T;
 }
-const returnItemFn: IReturnItemFn<number> = para => para;
+const returnItemFn: IReturnItemFn<number> = (para) => para;
+
+// 类声明
+// 约束泛型
+type Params = string | number;
+class Stack<T extends Params> {
+  private arr: T[] = [];
+  public push(item: T) {
+    this.arr.push(item);
+  }
+  public pop() {
+    this.arr.pop();
+  }
+}
+
+const stack = new Stack<number>();
+const stack1 = new Stack<string>();
+
+// 索引类型，约束类型
+function getValue1<T extends object, u extends keyof T>(obj: T, key: u) {
+  return obj[key];
+}
+
+// 多类型约束
+interface FirstInterface {
+  doSomething(): number;
+}
+
+interface SecondInterface {
+  doSomethingElse(): string;
+}
+
+interface ChildInterface extends FirstInterface, SecondInterface {}
+
+class Demo<T extends ChildInterface> {
+  private genericProperty: T;
+  constructor(genericProperty: T) {
+    this.genericProperty = genericProperty;
+  }
+  useT() {
+    this.genericProperty.doSomething();
+    this.genericProperty.doSomethingElse();
+  }
+}
