@@ -23,3 +23,4 @@
 // 每个文件中都存在module.paths, 表示模块搜索路径，require就是根据其来寻找文件
 // 都找不到的时候，从系统NODE_PATH环境变量查找
 console.log(module.paths, module.path)
+console.log(process.env.NODE_PATH)
