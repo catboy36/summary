@@ -26,7 +26,7 @@
 // 签名是对头部和载荷内容进行签名，一般设置一个secretKey，对前面两个结果进行HMACSHA25算法
 // Signature = HMACSHA256(base64Url(header)+.+base64Url(payload),secretKey)
 
-// 一旦前两部分数据被篡改，只要服务器加密要是没有泄露，那签名肯定和之前签名不一致
+// 一旦前两部分数据被篡改，只要服务器加密钥匙没有泄露，那签名肯定和之前签名不一致
 
 // 实现
 // token使用分两部分
