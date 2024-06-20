@@ -14,4 +14,4 @@
 
 // console.log(name, age, gender);
 
-require('./core/eventLoop');
+require('./core/performance');
