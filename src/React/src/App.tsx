@@ -1,5 +1,7 @@
+import EventExample from "./core/event";
+
 function App() {
-  return <>react app</>;
+  return <EventExample />;
 }
 
 export default App;
