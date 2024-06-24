@@ -6,7 +6,7 @@
 
 // getDerivedStateFromProps
 // 静态方法，不能访问到组件的实例
-// 执行时机：组件创建和更新阶段，不论props变化还是state变化，都调研
+// 执行时机：组件创建和更新阶段，不论props变化还是state变化，都调用
 // 每次render前调用，两个参数props,prevProps，可以比较加限制条件，防止无用的state更新
 // 该方法需要返回一个新对象作为新的state或者null表示state不需要更新
 
