@@ -1,7 +1,12 @@
-import EventExample from "./core/event";
+import RenderApp, { RenderClassApp } from './core/render';
 
 function App() {
-  return <EventExample />;
+  return (
+    <>
+      <RenderApp />
+      <RenderClassApp />
+    </>
+  );
 }
 
 export default App;
