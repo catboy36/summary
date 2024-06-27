@@ -1,10 +1,12 @@
-import RenderApp, { RenderClassApp } from './core/render';
+// import RenderApp, { RenderClassApp } from './core/render';
+import RouterApp from './router/router';
 
 function App() {
   return (
     <>
-      <RenderApp />
-      <RenderClassApp />
+      {/* <RenderApp />
+      <RenderClassApp /> */}
+      <RouterApp />
     </>
   );
 }
