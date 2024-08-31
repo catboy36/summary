@@ -55,3 +55,38 @@ webpack构建流程：
 
  loader本质是对象，plugin本质是对象
 
+
+
+### peerDependencies
+
+monorepo package.json
+
+相当于指定当前的开发环境
+
+主包有其指定的满足要求的包，不再多次下载，没有则下载
+
+### pnpm优势
+performance npm
+
+速度快，节省磁盘空间
+
+hard link 硬链接  多个文件名指向同一个索引 允许一个文件有多个有效的路径名称
+
+pnpm ~/ .pnpm-store
+
+建立 非扁平化的node_modules .pnpm里文件做硬链接 ，与其同级的包文件软链接（比如下载vue，其为软链接，真正链接的是.pnpm下的vue）
+
+
+### serverless
+
+不用关心部署
+1. FaaS function as a service 函数即服务
+2. BaaS backend as service 后端即服务
+
+
+### 前端安全措施
+1. 数据传输加密
+2. 输入验证和过滤
+3. 访问控制权限管理
+4. 安全编码
+5. 扫描漏洞，安全测试
